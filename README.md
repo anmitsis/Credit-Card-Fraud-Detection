@@ -1,6 +1,4 @@
-# Credit-Card-Fraud-Detection
- This project detects fraudulent transactions using a Kaggle dataset. To address class imbalance, I applied downsampling and SMOTE oversampling techniques. I evaluated Logistic Regression, Random Forest, and Decision Tree classifiers on the original, downsampled, and oversampled datasets to improve fraud detection performance.
-
+# Credit Card Fraud Detection
 
 ## Table of Contents
 
@@ -11,6 +9,7 @@
 5. [Evaluation](#evaluation)
 6. [Results](#results)
 7. [Conclusion](#conclusion)
+8. [Future Work](#future-work)
 
 ## Overview
 
@@ -54,8 +53,22 @@ The models were evaluated based on the following metrics:
 
 ## Results
 
-Each model was trained and tested on the original, downsampled, and oversampled datasets. The performance metrics for each model were recorded, and the model with the highest best metrics was selected as the best-performing model.
+Each model was trained and tested on the original, downsampled, and oversampled datasets. The performance metrics for each model were recorded, and the model with the highest F1 score was selected as the best-performing model.
 
 ## Conclusion
 
 This project demonstrates the application of machine learning for credit card fraud detection. Class imbalance was addressed using both downsampling and SMOTE oversampling techniques. The performance of multiple models was compared, and the best model was selected based on the evaluation metrics.
+
+## Future Work
+
+While this project provides a good foundation for detecting credit card fraud, there are several potential areas for improvement:
+
+1. **Model Optimization**: Further tuning of hyperparameters using techniques like GridSearchCV or RandomizedSearchCV could improve model performance.
+2. **Deep Learning Models**: Exploring deep learning models, such as neural networks, could yield better results, especially for large datasets.
+3. **Ensemble Methods**: Combining multiple models using techniques like boosting or bagging (e.g., XGBoost, AdaBoost) could improve accuracy and robustness.
+4. **Anomaly Detection Techniques**: Investigating unsupervised learning methods or anomaly detection algorithms could be helpful, especially when labels are limited.
+5. **Real-Time Fraud Detection**: Implementing the model for real-time fraud detection in a production environment could be a valuable next step.
+6. **Feature Engineering**: More advanced feature engineering and feature selection techniques could be explored to enhance model accuracy.
+
+These areas offer opportunities to further improve fraud detection accuracy and adapt the solution for more complex, real-world scenarios.
+
