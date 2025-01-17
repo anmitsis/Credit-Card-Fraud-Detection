@@ -51,13 +51,20 @@ The models were evaluated based on the following metrics:
 - **Recall**: The proportion of actual fraudulent transactions correctly identified.
 - **F1 Score**: The harmonic mean of precision and recall.
 
+It’s worth noting that when trained on the original, imbalanced dataset, the models displayed a high accuracy but low precision, indicating that they were predominantly predicting the majority class (normal transactions). This demonstrates how class imbalance can create a false sense of performance, as the model may appear effective due to high accuracy but fail to identify the minority class (fraudulent transactions) adequately. Therefore, class-balancing techniques like SMOTE and downsampling were crucial to improving model performance, particularly for the detection of fraudulent transactions.
+
 ## Results
 
 Each model was trained and tested on the original, downsampled, and oversampled datasets. The performance metrics for each model were recorded, and the model with the highest F1 score was selected as the best-performing model.
 
 ## Conclusion
 
-This project demonstrates the application of machine learning for credit card fraud detection. Class imbalance was addressed using both downsampling and SMOTE oversampling techniques. The performance of multiple models was compared, and the best model was selected based on the evaluation metrics.
+This project demonstrates the application of machine learning for credit card fraud detection. One key observation from the results is that class imbalance can significantly affect model performance. On the original, imbalanced dataset, models showed relatively high accuracy, but this was misleading as precision was notably low. This suggests that the model was primarily predicting the majority class (normal transactions) and failing to detect the minority class (fraudulent transactions), which is the primary goal of the model. 
+
+By addressing the class imbalance through techniques like downsampling and SMOTE oversampling, the models' ability to detect fraud was significantly improved. The performance of multiple models was compared, and the best model was selected based on the evaluation metrics.
+
+This highlights the importance of addressing class imbalance in machine learning tasks, especially in fraud detection, where false positives (normal transactions identified as fraudulent) are much more costly than false negatives.
+
 
 ## Future Work
 
